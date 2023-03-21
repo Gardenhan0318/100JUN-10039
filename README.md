@@ -2,6 +2,8 @@
 STUDY
 #include<stdio.h>
 
+#include<stdio.h>
+
 int main() {
 
     int score = 0;//점수
@@ -18,12 +20,4 @@ int main() {
     }
     mean = sum / 5;
     printf("%d", mean);
-}
-	
-		int avg = (score1 + score2 + score3 + score4 + score5) / 5;
-		printf("학생 평균의 점수:%d", avg);
-
-	
-	return 0;
-
 }
