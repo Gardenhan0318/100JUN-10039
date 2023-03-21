@@ -1,37 +1,24 @@
 # 100JUN-10039
 STUDY
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h> 
+#include<stdio.h>
 
-int main(void) {
-	int score1, score2, score3, score4, score5; //학생의 점수 변수 설정
-	score1 = 0; 
-	score2 = 0;
-	score3 = 0;
-	score4 = 0;
-	score5 = 0; //학생의 점수 변수 설정
+int main() {
+
+    int score = 0;//점수
+    int sum = 0;  //총합
+    int mean = 0; //평균
+    int i;
 
 
-		printf("원섭의 점수:");
-		scanf("%d", &score1);
-
-		printf("세희의 점수:");
-		scanf("%d", &score2);
-
-		printf("상근의 점수:");
-		scanf("%d", &score3);
-
-		printf("숭의 점수:");
-		scanf("%d", &score4);
-
-		printf("강수의 점수:");
-		scanf("%d", &score5);
-
-		if (score1 < 40, score4 < 40) { //원섭과 숭의 점수는 40미만
-			score1 =40, score4 =40; // 원섭과 숭의 점수는 40으로 취급
-		}
-
-		
+    for (int i = 1; i <= 5; i++) {//학생1~5까지의 점수 입력
+        scanf_s("%d", &score);//scanf_s를 쓴 이유는 #define _CRT_SECURE_NO_WARNINGS 안 쓰기 위해서
+        if (score < 40)
+            score = 40;
+        sum += score;
+    }
+    mean = sum / 5;
+    printf("%d", mean);
+}
 	
 		int avg = (score1 + score2 + score3 + score4 + score5) / 5;
 		printf("학생 평균의 점수:%d", avg);
